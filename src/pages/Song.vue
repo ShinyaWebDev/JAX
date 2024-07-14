@@ -3,18 +3,17 @@
     <v-row justify="center" align="center">
       <v-col cols="12" class="text-center">
         <h2 class="headline">Manage Your Songs</h2>
-        <v-btn class="my-4" color="primary" @click="showDialog = true"
-          >Upload Song</v-btn
-        >
+        <v-btn class="my-4" color="primary" @click="showDialog = true">
+          Upload Song
+        </v-btn>
       </v-col>
     </v-row>
     <v-row justify="center" align="center">
       <v-col cols="12" md="6" class="d-flex justify-center">
-        <v-responsive aspect-ratio="16/9" @click.stop>
-          <div class="overlay" v-if="showOverlay"></div>
+        <v-responsive aspect-ratio="16/9">
           <iframe
-            width="560"
-            height="315"
+            width="315"
+            height="215"
             src="https://www.youtube.com/embed/yaGD5BCPrwQ?si=NEurtm_Glyr0ku-N"
             title="YouTube video player"
             frameborder="0"
@@ -25,11 +24,10 @@
         </v-responsive>
       </v-col>
       <v-col cols="12" md="6" class="d-flex justify-center">
-        <v-responsive aspect-ratio="16/9" @click.stop>
-          <div class="overlay" v-if="showOverlay"></div>
+        <v-responsive aspect-ratio="16/9">
           <iframe
-            width="560"
-            height="315"
+            width="315"
+            height="215"
             src="https://www.youtube.com/embed/Eeprlu37nZc?si=GX_D9F6lO1idqqAk"
             title="YouTube video player"
             frameborder="0"
@@ -53,13 +51,9 @@
 </template>
 
 <script lang="ts" setup>
-const showDialog = ref(false);
-const showOverlay = ref(true);
+import { ref } from "vue";
 
-// Hide overlay after iframe loads
-// const hideOverlay = () => {
-//   showOverlay.value = false;
-// };
+const showDialog = ref(false);
 </script>
 
 <style scoped>
@@ -70,14 +64,5 @@ const showOverlay = ref(true);
 .v-responsive {
   margin: 20px 0;
   position: relative;
-}
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.01); /* Transparent overlay */
-  z-index: 1;
 }
 </style>
