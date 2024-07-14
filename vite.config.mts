@@ -13,7 +13,7 @@ import { fileURLToPath, URL } from "node:url";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: process.env.NODE_ENV === "production" ? "/JAX/" : "/",
+  base: "/JAX/", // Ensure there are no double slashes
   plugins: [
     VueRouter({
       dts: "src/typed-router.d.ts",
@@ -38,7 +38,6 @@ export default defineConfig({
     Vue({
       template: { transformAssetUrls },
     }),
-    // https://github.com/vuetifyjs/vuetify-loader/tree/master/packages/vite-plugin#readme
     Vuetify({
       autoImport: true,
       styles: {
