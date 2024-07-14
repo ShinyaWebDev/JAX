@@ -57,9 +57,9 @@ const showDialog = ref(false);
 const showOverlay = ref(true);
 
 // Hide overlay after iframe loads
-const hideOverlay = () => {
-  showOverlay.value = false;
-};
+// const hideOverlay = () => {
+//   showOverlay.value = false;
+// };
 </script>
 
 <style scoped>

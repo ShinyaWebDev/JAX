@@ -13,9 +13,9 @@
 </template>
 
 <script lang="ts" setup>
-const animate = () => {
-  // Add your animation logic here
-};
+// const animate = () => {
+//   // Add your animation logic here
+// };
 </script>
 
 <style scoped>
